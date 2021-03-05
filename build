@@ -1,0 +1,7 @@
+#!/bin/sh
+
+./mvnw clean package -DskipTests
+
+docker rm -f payment
+docker build -t payment .
+docker run --name payment -dp 8090:8080 payment
