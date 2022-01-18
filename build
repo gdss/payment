@@ -3,5 +3,5 @@
 ./mvnw clean package -DskipTests
 
 docker rm -f payment
-docker build -t payment .
-docker run --name payment -dp 8090:8080 payment
+docker build -t gdss/payment .
+docker run --name payment -dp 8090:8080 gdss/payment

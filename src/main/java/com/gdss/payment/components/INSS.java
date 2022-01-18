@@ -1,5 +1,10 @@
 package com.gdss.payment.components;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public class INSS {
 
     private double fromSalary;
@@ -7,23 +12,5 @@ public class INSS {
     private double toSalary;
 
     private double aliquot;
-
-    public INSS(double fromSalary, double toSalary, double aliquot) {
-        this.fromSalary = fromSalary;
-        this.toSalary = toSalary;
-        this.aliquot = aliquot;
-    }
-
-    public double getFromSalary() {
-        return fromSalary;
-    }
-
-    public double getToSalary() {
-        return toSalary;
-    }
-
-    public double getAliquot() {
-        return aliquot;
-    }
 
 }

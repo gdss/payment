@@ -1,8 +1,8 @@
-FROM openjdk:8-jre-alpine as builder
+FROM openjdk:11 as builder
 COPY ./target/*.jar app.jar
 RUN java -Djarmode=layertools -jar app.jar extract
 
-FROM openjdk:8-jre-alpine
+FROM openjdk:11
 COPY --from=builder dependencies/ ./
 COPY --from=builder snapshot-dependencies/ ./
 COPY --from=builder spring-boot-loader/ ./

@@ -15,7 +15,12 @@ public class PaymentService {
         double inss = calculateINSS(salary);
         double irrf = calculateIRRF(salary - inss);
 
-        return new Payslip(salary, inss, irrf, calculatePayment(salary, inss, irrf));
+        return Payslip.builder()
+                .salary(PaymentUtil.round(salary))
+                .inss(PaymentUtil.round(inss))
+                .irrf(PaymentUtil.round(irrf))
+                .payment(PaymentUtil.round(calculatePayment(salary, inss, irrf)))
+                .build();
     }
 
     private double calculatePayment(double payment, double inss, double irrf) {
