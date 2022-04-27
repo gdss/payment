@@ -16,12 +16,12 @@ class PaymentServiceTest {
 
     @Test
     void testExecuteFixedINSS() {
-        Payslip payslip = paymentService.execute(8500.00);
+        Payslip payslip = paymentService.execute(10000.00);
 
-        assertEquals(8500.00, payslip.getSalary());
-        assertEquals(751.99, payslip.getInss());
-        assertEquals(1261.34, payslip.getIrrf());
-        assertEquals(6486.67, payslip.getPayment());
+        assertEquals(10000.00, payslip.getSalary());
+        assertEquals(828.39, payslip.getInss());
+        assertEquals(1652.83, payslip.getIrrf());
+        assertEquals(7518.78, payslip.getPayment());
     }
 
 }

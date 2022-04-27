@@ -17,8 +17,8 @@ curl http://localhost:8090/payment/10000
 ```JSON
 {
   "salary": 10000,
-  "inss": 751.99,
-  "irrf": 1673.84,
-  "payment": 7574.17
+  "inss": 828.39,
+  "irrf": 1652.83,
+  "payment": 7518.78
 }
 ```

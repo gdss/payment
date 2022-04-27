@@ -31,10 +31,10 @@ class PaymentControllerTest {
     @Test
     void testGetPayslip() throws Exception {
         Payslip payslip = Payslip.builder()
-                .salary(8500.00)
-                .inss(751.99)
-                .irrf(1261.34)
-                .payment(6486.67)
+                .salary(10000.00)
+                .inss(828.39)
+                .irrf(1652.83)
+                .payment(7518.78)
                 .build();
         when(paymentService.execute(SALARY)).thenReturn(payslip);
 

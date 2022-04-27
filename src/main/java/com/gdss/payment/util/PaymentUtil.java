@@ -20,10 +20,10 @@ public class PaymentUtil {
 
     public List<INSS> getINSSRangeList() {
         List<INSS> inssList = new ArrayList<>();
-        inssList.add(new INSS(0.00, 1100.00, 0.075));
-        inssList.add(new INSS(1100.01, 2203.48, 0.09));
-        inssList.add(new INSS(2203.49, 3305.22, 0.12));
-        inssList.add(new INSS(3305.23, 6433.57, 0.14));
+        inssList.add(new INSS(0.00, 1212, 0.075));
+        inssList.add(new INSS(1212.01, 2427.35, 0.09));
+        inssList.add(new INSS(2427.36, 3641.03, 0.12));
+        inssList.add(new INSS(3641.04, 7087.22, 0.14));
         return inssList;
     }
 
